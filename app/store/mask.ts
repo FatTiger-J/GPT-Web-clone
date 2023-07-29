@@ -40,6 +40,7 @@ export const createEmptyMask = () =>
     id: DEFAULT_MASK_ID,
     avatar: DEFAULT_MASK_AVATAR,
     name: DEFAULT_TOPIC,
+    hideContext: true,
     context: [],
     syncGlobalConfig: true, // use global config as default
     modelConfig: { ...useAppConfig.getState().modelConfig },

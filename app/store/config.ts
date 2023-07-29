@@ -57,50 +57,50 @@ export const ALL_MODELS = [
     name: "gpt-4",
     available: ENABLE_GPT4,
   },
-  {
-    name: "gpt-4-0314",
-    available: ENABLE_GPT4,
-  },
-  {
-    name: "gpt-4-0613",
-    available: ENABLE_GPT4,
-  },
+  // {
+  //   name: "gpt-4-0314",
+  //   available: ENABLE_GPT4,
+  // },
+  // {
+  //   name: "gpt-4-0613",
+  //   available: ENABLE_GPT4,
+  // },
   {
     name: "gpt-4-32k",
     available: ENABLE_GPT4,
   },
-  {
-    name: "gpt-4-32k-0314",
-    available: ENABLE_GPT4,
-  },
-  {
-    name: "gpt-4-32k-0613",
-    available: ENABLE_GPT4,
-  },
+  // {
+  //   name: "gpt-4-32k-0314",
+  //   available: ENABLE_GPT4,
+  // },
+  // {
+  //   name: "gpt-4-32k-0613",
+  //   available: ENABLE_GPT4,
+  // },
   {
     name: "gpt-3.5-turbo",
     available: true,
   },
-  {
-    name: "gpt-3.5-turbo-0301",
-    available: true,
-  },
-  {
-    name: "gpt-3.5-turbo-0613",
-    available: true,
-  },
+  // {
+  //   name: "gpt-3.5-turbo-0301",
+  //   available: true,
+  // },
+  // {
+  //   name: "gpt-3.5-turbo-0613",
+  //   available: true,
+  // },
   {
     name: "gpt-3.5-turbo-16k",
     available: true,
   },
-  {
-    name: "gpt-3.5-turbo-16k-0613",
-    available: true,
-  },
-  {
-    name: "qwen-v1", // éä¹åé®
-    available: false,
-  },
+  // {
+  //   name: "gpt-3.5-turbo-16k-0613",
+  //   available: true,
+  // },
+  // {
+  //   name: "qwen-v1", // éä¹åé®
+  //   available: false,
+  // },
   {
     name: "ernie", // æå¿ä¸è¨
     available: false,
@@ -113,10 +113,10 @@ export const ALL_MODELS = [
     name: "llama", // llama
     available: false,
   },
-  {
-    name: "chatglm", // chatglm-6b
-    available: false,
-  },
+  // {
+  //   name: "chatglm", // chatglm-6b
+  //   available: false,
+  // },
 ] as const;
 
 export type ModelType = (typeof ALL_MODELS)[number]["name"];
