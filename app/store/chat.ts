@@ -158,7 +158,8 @@ export const useChatStore = create<ChatStore>()(
         session.id = get().globalId;
 
         if (mask) {
-          session.mask = { ...mask };
+          // hideContext default true
+          session.mask = { ...mask, hideContext: true };
           session.topic = mask.name;
         }
 
@@ -531,6 +532,7 @@ export const useChatStore = create<ChatStore>()(
       name: StoreKey.Chat,
       version: 2,
       migrate(persistedState, version) {
+        console.log("useChatStore--migrate", persistedState, version);
         const state = persistedState as any;
         const newState = JSON.parse(JSON.stringify(state)) as ChatStore;
 

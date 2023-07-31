@@ -1,8 +1,8 @@
 /*
  * @Author: hilin hilin
  * @Date: 2023-07-15 15:26:02
- * @LastEditors: hilin hilin
- * @LastEditTime: 2023-07-15 16:59:25
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-07-31 17:38:29
  * @FilePath: /GPT-Web-copy/app/components/chat.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -88,7 +88,7 @@ export function SessionConfigModel(props: { onClose: () => void }) {
   const session = chatStore.currentSession();
   const maskStore = useMaskStore();
   const navigate = useNavigate();
-
+  console.log("session", session);
   return (
     <div className="modal-mask">
       <Modal
@@ -471,6 +471,7 @@ export function Chat() {
   type RenderMessage = ChatMessage & { preview?: boolean };
 
   const chatStore = useChatStore();
+  console.log("<Chat>-chatStore", chatStore);
   const [session, sessionIndex] = useChatStore((state) => [
     state.currentSession(),
     state.currentSessionIndex,
@@ -478,7 +479,7 @@ export function Chat() {
   const config = useAppConfig();
   const fontSize = config.fontSize;
   const [showExport, setShowExport] = useState(false);
-  const [showLoginModal,setShowLoginModal] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const [userInput, setUserInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -752,7 +753,7 @@ export function Chat() {
           )}
         </div>
         <div className="window-actions">
-          {(!showMaxIcon && !accessStore.isAuthorized()) && (
+          {!showMaxIcon && !accessStore.isAuthorized() && (
             <div className="window-action-button">
               <IconButton
                 bordered
@@ -787,7 +788,7 @@ export function Chat() {
               }}
             />
           </div>
-          {(showMaxIcon && !accessStore.isAuthorized()) && (
+          {showMaxIcon && !accessStore.isAuthorized() && (
             <div className="window-action-button">
               <IconButton
                 bordered
@@ -970,11 +971,9 @@ export function Chat() {
       {showExport && (
         <ExportMessageModal onClose={() => setShowExport(false)} />
       )}
-      {
-        showLoginModal && (
-          <PasswordMessageModal onClose={() => setShowLoginModal(false)} />
-        )
-      }
+      {showLoginModal && (
+        <PasswordMessageModal onClose={() => setShowLoginModal(false)} />
+      )}
     </div>
   );
 }
