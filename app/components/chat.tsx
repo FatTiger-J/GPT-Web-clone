@@ -2,7 +2,7 @@
  * @Author: hilin hilin
  * @Date: 2023-07-15 15:26:02
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-07-31 17:38:29
+ * @LastEditTime: 2023-07-31 23:51:34
  * @FilePath: /GPT-Web-copy/app/components/chat.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -34,6 +34,7 @@ import SettingsIcon from "../icons/chat-settings.svg";
 import LightIcon from "../icons/light.svg";
 import DarkIcon from "../icons/dark.svg";
 import AutoIcon from "../icons/auto.svg";
+import AutumnIcon from "../icons/autumn.svg";
 import BottomIcon from "../icons/bottom.svg";
 import StopIcon from "../icons/pause.svg";
 
@@ -78,6 +79,8 @@ import { prettyObject } from "../utils/format";
 import { ExportMessageModal } from "./exporter";
 import { getClientConfig } from "../config/client";
 import { PasswordMessageModal } from "./InputOnetimePassword";
+
+// const AutumnIcon = () => <div style={{ width: 16, height: 16 }}><AutumnIconSVG /></div>
 
 const Markdown = dynamic(async () => (await import("./markdown")).Markdown, {
   loading: () => <LoadingIcon />,
@@ -384,7 +387,7 @@ export function ChatActions(props: {
   // switch themes
   const theme = config.theme;
   function nextTheme() {
-    const themes = [Theme.Auto, Theme.Light, Theme.Dark];
+    const themes = [Theme.Auto, Theme.Light, Theme.Dark, Theme.Autumn];
     const themeIndex = themes.indexOf(theme);
     const nextIndex = (themeIndex + 1) % themes.length;
     const nextTheme = themes[nextIndex];
@@ -430,6 +433,8 @@ export function ChatActions(props: {
               <LightIcon />
             ) : theme === Theme.Dark ? (
               <DarkIcon />
+            ) : theme === Theme.Autumn ? (
+              <AutumnIcon />
             ) : null}
           </>
         }
@@ -471,7 +476,6 @@ export function Chat() {
   type RenderMessage = ChatMessage & { preview?: boolean };
 
   const chatStore = useChatStore();
-  console.log("<Chat>-chatStore", chatStore);
   const [session, sessionIndex] = useChatStore((state) => [
     state.currentSession(),
     state.currentSessionIndex,

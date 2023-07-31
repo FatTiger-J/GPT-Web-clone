@@ -39,10 +39,42 @@
 
   --theme-color: var(--gray);
 
-  div:not(.no-dark) > svg {
+  div:not(.no-dark)>svg {
     filter: invert(0.5);
   }
 }
+
+@mixin autumn {
+  --theme: autumn;
+
+  /* color */
+  // 聊天框背景色
+  --white: rgb(255, 255, 240);
+  // 字体颜色
+  --black: rgb(48, 48, 48);
+  // 大背景底色
+  --gray: rgb(255, 248, 220);
+  // 历史聊天边框和发送按钮颜色
+  --primary: rgb(29, 147, 171);
+  // 侧边栏颜色
+  --second: rgb(255, 250, 205);
+
+  --hover-color: #f3f3f3;
+  --bar-color: rgba(0, 0, 0, 0.1);
+  --theme-color: var(--gray);
+
+  /* shadow */
+  --shadow: 50px 50px 100px 10px rgb(0, 0, 0, 0.1);
+  --card-shadow: 0px 2px 4px 0px rgb(0, 0, 0, 0.05);
+
+  /* stroke */
+  --border-in-light: 1px solid rgb(222, 222, 222);
+}
+
+.autumn {
+  @include autumn;
+}
+
 
 .light {
   @include light;
@@ -86,6 +118,7 @@
     @include dark;
   }
 }
+
 html {
   height: var(--full-height);
 
@@ -254,6 +287,7 @@ div.math {
     align-items: flex-end;
   }
 }
+
 .pr5 {
   padding-right: 5px;
 }
@@ -358,15 +392,15 @@ pre {
   text-overflow: ellipsis;
 }
 
-.particle-connect-wallet-btn,.particle-account-info {
+.particle-connect-wallet-btn,
+.particle-account-info {
   background-color: rgba(0, 0, 0, 0) !important;
   border: var(--border-in-light) !important;
   height: 38px !important;
   padding: 0px 10px !important;
   font-size: 14px !important;
-    color: var(--black) !important;
-    font-weight: normal !important;
+  color: var(--black) !important;
+  font-weight: normal !important;
 }
-.particle-account-modal-box {
 
-}
+.particle-account-modal-box {}

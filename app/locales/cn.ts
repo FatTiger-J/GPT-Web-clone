@@ -33,6 +33,7 @@ const cn = {
         auto: "自动主题",
         light: "亮色模式",
         dark: "深色模式",
+        autumn: "金秋模式",
       },
       Prompt: "快捷指令",
       Masks: "所有角色",
