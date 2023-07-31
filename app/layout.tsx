@@ -1,10 +1,15 @@
+/*
+ * @Description:
+ * @Author: duanwensheng
+ * @Date: 2023-07-31 14:48:52
+ */
 import "./styles/globals.scss";
 import "./styles/markdown.scss";
 import "./styles/highlight.scss";
 import { getClientConfig } from "./config/client";
 
 export const metadata = {
-  title: "ChatGPT Next Web",
+  title: "Arclinks AI",
   description: "Your personal ChatGPT Chat Bot.",
   viewport: {
     width: "device-width",
@@ -16,7 +21,7 @@ export const metadata = {
     { media: "(prefers-color-scheme: dark)", color: "#151515" },
   ],
   appleWebApp: {
-    title: "ChatGPT Next Web",
+    title: "Arclinks AI",
     statusBarStyle: "default",
   },
 };
