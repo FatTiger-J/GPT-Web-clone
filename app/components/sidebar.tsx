@@ -110,7 +110,7 @@ export function SideBar(props: { className?: string }) {
   const navigate = useNavigate();
   const config = useAppConfig();
   const isMobileScreen = useMobileScreen();
-  const [showLoginModal,setShowLoginModal] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
 
   useHotKey();
 
@@ -122,10 +122,10 @@ export function SideBar(props: { className?: string }) {
     >
       <div className={styles["sidebar-header"]} data-tauri-drag-region>
         <div className={styles["sidebar-title"]} data-tauri-drag-region>
-          Arclinks
+          Arclinks 教育版
         </div>
         <div className={styles["sidebar-sub-title"]}>
-          Your pass to 600+ AI tools and user community
+          AI赋能教育 科技助力成长
         </div>
       </div>
 
@@ -144,16 +144,16 @@ export function SideBar(props: { className?: string }) {
           onClick={() => showToast(Locale.WIP)}
           shadow
         /> */}
-        {(isMobileScreen && !accessStore.isAuthorized()) && (
-            <div className="window-action-button">
-              <IconButton
-                bordered
-                className={styles["sidebar-bar-button"]}
-                text={Locale.Password.Login}
-                onClick={() => setShowLoginModal(true)}
-              />
-            </div>
-          )}
+        {isMobileScreen && !accessStore.isAuthorized() && (
+          <div className="window-action-button">
+            <IconButton
+              bordered
+              className={styles["sidebar-bar-button"]}
+              text={Locale.Password.Login}
+              onClick={() => setShowLoginModal(true)}
+            />
+          </div>
+        )}
       </div>
       <div
         className={styles["sidebar-body"]}
@@ -210,11 +210,9 @@ export function SideBar(props: { className?: string }) {
         className={styles["sidebar-drag"]}
         onMouseDown={(e) => onDragMouseDown(e as any)}
       ></div>
-      {
-          showLoginModal && (
-            <PasswordMessageModal onClose={() => setShowLoginModal(false)} />
-          )
-        }
+      {showLoginModal && (
+        <PasswordMessageModal onClose={() => setShowLoginModal(false)} />
+      )}
     </div>
   );
 }
