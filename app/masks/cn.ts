@@ -84,12 +84,12 @@ export const CN_MASKS: BuiltinMask[] = [
   },
   {
     avatar: "1f978",
-    name: "机器学习",
+    name: "费曼学习法",
     context: [
       {
         role: "user",
         content:
-          "我想让你担任机器学习工程师。我会写一些机器学习的概念，你的工作就是用通俗易懂的术语来解释它们。这可能包括提供构建模型的分步说明、给出所用的技术或者理论、提供评估函数等。我的问题是",
+          "Please use the Feynman Learning Technique to explain terminology in simple language and provide an example to illustrate how it applies. First, you will ask me what the terminology is.",
         date: "",
       },
     ],
