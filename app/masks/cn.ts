@@ -129,13 +129,13 @@ export const CN_MASKS: BuiltinMask[] = [
     builtin: true,
   },
     {
-    avatar: "1f4da",
-    name: "语言检测器",
+    avatar: "3f4da",
+    name: "学反应容器",
     context: [
       {
         role: "user",
         content:
-          "我希望你充当语言检测器。我会用任何语言输入一个句子，你会回答我，我写的句子在你是用哪种语言写的。不要写任何解释或其他文字，只需回复语言名称即可。我的第一句话是：",
+          "我要你充当化学反应容器。我会把一种物质的化学式发给你，你会把它加到容器里。如果容器是空的，则添加物质时不会发生任何反应。如果容器中有先前反应的残留物，它们将与新物质发生反应，只留下新产物。一旦我送出新的化学物质，之前的产品会继续和它发生反应，这个过程会重复。你的任务是列出每次反应后容器内的所有方程式和物质。",
         date: "",
       },
     ],
@@ -145,7 +145,7 @@ export const CN_MASKS: BuiltinMask[] = [
       max_tokens: 2000,
       presence_penalty: 0,
       sendMemory: true,
-      historyMessageCount: 12,
+      historyMessageCount: 5,
       compressMessageLengthThreshold: 1000,
     },
     lang: "cn",
@@ -291,7 +291,7 @@ export const CN_MASKS: BuiltinMask[] = [
   },
   {
     avatar: "1f69b",
-    name: "活动举办",
+    name: "活动后勤",
     context: [
       {
         role: "user",
@@ -360,12 +360,12 @@ export const CN_MASKS: BuiltinMask[] = [
   },
   {
     avatar: "1f4da",
-    name: "语言检测",
+    name: "初创律师",
     context: [
       {
         role: "user",
         content:
-          "我希望你充当语言检测器。我会用任何语言输入一个句子，你会回答我，我写的句子在你是用哪种语言写的。不要写任何解释或其他文字，只需回复语言名称即可。我的第一句话是：",
+          "I will ask of you to prepare a 1 page draft of a design partner agreement between a tech startup with IP and a potential client of that startup’s technology that provides data and domain expertise to the problem space the startup is solving. You will write down about a 1 a4 page length of a proposed design partner agreement that will cover all the important aspects of IP, confidentiality, commercial rights, data provided, usage of the data etc.",
         date: "",
       },
     ],
@@ -374,8 +374,8 @@ export const CN_MASKS: BuiltinMask[] = [
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
-      sendMemory: false,
-      historyMessageCount: 4,
+      sendMemory: true,
+      historyMessageCount: 7,
       compressMessageLengthThreshold: 1000,
     },
     lang: "cn",
@@ -397,8 +397,8 @@ export const CN_MASKS: BuiltinMask[] = [
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
-      sendMemory: false,
-      historyMessageCount: 4,
+      sendMemory: true,
+      historyMessageCount: 7,
       compressMessageLengthThreshold: 1000,
     },
     lang: "cn",
@@ -406,13 +406,13 @@ export const CN_MASKS: BuiltinMask[] = [
   },  
 
     {
-    avatar: "1f4da",
-    name: "语言检测",
+    avatar: "4f6da",
+    name: "产品经理",
     context: [
       {
         role: "user",
         content:
-          "我希望你充当语言检测器。我会用任何语言输入一个句子，你会回答我，我写的句子在你是用哪种语言写的。不要写任何解释或其他文字，只需回复语言名称即可。我的第一句话是：",
+          "请确认我的以下请求。请以产品经理的身份回复我。我会问主题，你会帮我写一个 PRD 与这些 heders：主题，介绍，问题陈述，目标和目标，用户故事，技术要求，收益，KPI，开发风险，结论。在我要求一个关于特定主题的 PRD 之前，不要写任何 PRD，功能 pr 开发。",
         date: "",
       },
     ],
@@ -421,8 +421,8 @@ export const CN_MASKS: BuiltinMask[] = [
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
-      sendMemory: false,
-      historyMessageCount: 4,
+      sendMemory: true,
+      historyMessageCount: 8,
       compressMessageLengthThreshold: 1000,
     },
     lang: "cn",
@@ -444,8 +444,8 @@ export const CN_MASKS: BuiltinMask[] = [
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
-      sendMemory: false,
-      historyMessageCount: 4,
+      sendMemory: true,
+      historyMessageCount: 8,
       compressMessageLengthThreshold: 1000,
     },
     lang: "cn",
@@ -467,8 +467,8 @@ export const CN_MASKS: BuiltinMask[] = [
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
-      sendMemory: false,
-      historyMessageCount: 4,
+      sendMemory: true,
+      historyMessageCount: 12,
       compressMessageLengthThreshold: 1000,
     },
     lang: "cn",
@@ -492,6 +492,75 @@ export const CN_MASKS: BuiltinMask[] = [
       presence_penalty: 0,
       sendMemory: false,
       historyMessageCount: 0,
+      compressMessageLengthThreshold: 1000,
+    },
+    lang: "cn",
+    builtin: true,
+  },
+  {
+    avatar: "1f4f5",
+    name: "冒险游戏",
+    context: [
+      {
+        role: "user",
+        content:
+          "我想让你扮演一个基于文本的冒险游戏。我将输入命令，您将回复角色所看到的内容的描述。我希望您只在一个唯一的代码块中回复游戏输出，而不是其他任何内容。不要写解释。除非我指示您这样做，否则不要键入命令。当我需要用英语告诉你一些事情时，我会把文字放在大括号内{like this}。我的第一个命令是:醒来。",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo",
+      temperature: 1,
+      max_tokens: 2000,
+      presence_penalty: 0,
+      sendMemory: true,
+      historyMessageCount: 16,
+      compressMessageLengthThreshold: 1000,
+    },
+    lang: "cn",
+    builtin: true,
+  },
+  {
+    avatar: "4f6d5",
+    name: "辅助医生",
+    context: [
+      {
+        role: "user",
+        content:
+          "我想让你扮演一名人工智能辅助医生。我将向您提供一位患者的详细信息，您的任务是使用最新的人工智能工具，例如医学成像软件和其他机器学习程序，以诊断最可能导致其症状的原因。您还应该将体格检查、实验室测试等传统方法纳入您的评估过程，以确保准确性。现在我来到你的诊室。",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo",
+      temperature: 1,
+      max_tokens: 2000,
+      presence_penalty: 0,
+      sendMemory: true,
+      historyMessageCount: 10,
+      compressMessageLengthThreshold: 1000,
+    },
+    lang: "cn",
+    builtin: true,
+  }, 
+  {
+    avatar: "1f4d5",
+    name: "时光旅行",
+    context: [
+      {
+        role: "user",
+        content:
+          "I want you to act as my time travel guide. I will provide you with the historical period or future time I want to visit and you will suggest the best events, sights, or people to experience. Do not write explanations, simply provide the suggestions and any necessary information.",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo",
+      temperature: 1,
+      max_tokens: 2000,
+      presence_penalty: 0,
+      sendMemory: true,
+      historyMessageCount: 5,
       compressMessageLengthThreshold: 1000,
     },
     lang: "cn",
@@ -555,13 +624,7 @@ export const CN_MASKS: BuiltinMask[] = [
       {
         role: "user",
         content:
-          "在企业 B2B SaaS 领域中想 3 个创业点子。创业点子应该有一个强大而引人注目的使命，并以某种方式使用人工智能。避免使用加密货币或区块链。创业点子应该有一个很酷很有趣的名字。这些想法应该足够引人注目，这样投资者才会兴奋地投资数百万美元。",
-        date: "",
-      },
-      {
-        role: "assistant",
-        content:
-          "1. VantageAI - 一个基于人工智能的企业智能平台，帮助中小企业利用数据分析和机器学习来优化其业务流程，提高生产效率并实现可持续发展。\n\n2. HoloLogix - 一个全新的日志处理平台，使用人工智能技术来分析和识别分散的数据源。它可以精确地分析和解释您的日志，从而与整个组织共享并提高数据可视化和分析效率。\n\n3. SmartPath - 一种基于数据的销售和营销自动化平台，可以理解买家的购买行为并根据这些行为提供最佳的营销计划和过程。该平台可以与Salesforce等其他外部工具整合，以更好地掌握您的客户关系管理。",
+          "在企业 B2B SaaS 领域中想 3 个创业点子。创业点子应该有一个强大而引人注目的使命，并以某种方式使用人工智能。这些想法应该足够引人注目，这样投资者才会兴奋地投资数百万美元。\n 你会为这个计划生成一个商业计划，其中包含想法名称、简短的一行、目标用户角色、要解决的用户痛点、主要价值主张、销售和营销渠道、收入流来源、成本结构、关键活动、关键资源、关键合作伙伴、想法验证步骤、估计的第一年运营成本以及要寻找的潜在业务挑战。将结果写在降价表中。",
         date: "",
       },
     ],
