@@ -46,7 +46,30 @@ export const EN_MASKS: BuiltinMask[] = [
     },
     lang: "en",
     builtin: true,
-  },
+ },
+ {
+    avatar: "1f4da",
+    name: "文章改写",
+    context: [
+      {
+        role: "user",
+        content:
+          "Your task is to rewrite the entire text in better words and make it unique with natural language.",
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-3.5-turbo",
+      temperature: 1,
+      max_tokens: 2000,
+      presence_penalty: 0,
+      sendMemory: false,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 1000,
+    },
+    lang: "en",
+    builtin: true,
+  },  
   {
     avatar: "2328-fe0f",
     name: "Coder",
