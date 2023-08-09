@@ -25,8 +25,8 @@ export const EN_MASKS: BuiltinMask[] = [
     builtin: true,
   },
   {
-    avatar: "English Buddy",
-    name: "Prompt Improvement",
+    avatar: "1g23e",
+    name: "English Buddy",
     context: [
       {
         role: "user",
