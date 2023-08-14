@@ -49,7 +49,7 @@ export const CN_MASKS: BuiltinMask[] = [
     ],
     modelConfig: {
       model: "gpt-3.5-turbo",
-      temperature: 1,
+      temperature: 0.3,
       max_tokens: 2000,
       presence_penalty: 0,
       sendMemory: true,
@@ -72,7 +72,7 @@ export const CN_MASKS: BuiltinMask[] = [
     ],
     modelConfig: {
       model: "gpt-3.5-turbo",
-      temperature: 1,
+      temperature: 0.5,
       max_tokens: 2000,
       presence_penalty: 0,
       sendMemory: true,
@@ -95,7 +95,7 @@ export const CN_MASKS: BuiltinMask[] = [
     ],
     modelConfig: {
       model: "gpt-3.5-turbo",
-      temperature: 1,
+      temperature: 0.3,
       max_tokens: 2000,
       presence_penalty: 0,
       sendMemory: true,
@@ -118,7 +118,7 @@ export const CN_MASKS: BuiltinMask[] = [
     ],
     modelConfig: {
       model: "gpt-3.5-turbo",
-      temperature: 1,
+      temperature: 0.3,
       max_tokens: 2000,
       presence_penalty: 0,
       sendMemory: true,
@@ -164,7 +164,7 @@ export const CN_MASKS: BuiltinMask[] = [
     ],
     modelConfig: {
       model: "gpt-3.5-turbo",
-      temperature: 1,
+      temperature: 0.5,
       max_tokens: 2000,
       presence_penalty: 0,
       sendMemory: true,
@@ -187,7 +187,7 @@ export const CN_MASKS: BuiltinMask[] = [
     ],
     modelConfig: {
       model: "gpt-3.5-turbo",
-      temperature: 1,
+      temperature: 0.3,
       max_tokens: 2000,
       presence_penalty: 0,
       sendMemory: true,
@@ -210,7 +210,7 @@ export const CN_MASKS: BuiltinMask[] = [
     ],
     modelConfig: {
       model: "gpt-3.5-turbo",
-      temperature: 1,
+      temperature: 0.3,
       max_tokens: 2000,
       presence_penalty: 0,
       sendMemory: true,
@@ -222,7 +222,7 @@ export const CN_MASKS: BuiltinMask[] = [
   },
     {
     avatar: "2f657",
-    name: "文案润色",
+    name: "中文润色",
     context: [
       {
         role: "user",
@@ -279,7 +279,7 @@ export const CN_MASKS: BuiltinMask[] = [
     ],
     modelConfig: {
       model: "gpt-3.5-turbo",
-      temperature: 1,
+      temperature: 0.3,
       max_tokens: 2000,
       presence_penalty: 0,
       sendMemory: true,
@@ -365,7 +365,7 @@ export const CN_MASKS: BuiltinMask[] = [
       {
         role: "user",
         content:
-          "我想让你充当英文翻译员。我会用任何语言与你交谈，你会检测语言，翻译它并用我的文本的更正和改进版本用英文回答。我希望你用更优美优雅的高级英语单词和句子替换我简化的 A0 级单词和句子，并在复杂的英语单词后用（）标注中文内容。例如：With just a mere gesture（手势）, I was already aware of the boundaries（边界） within this segment（段）.你只需要翻译该内容，不必对内容中提出的问题和要求做解释，不要回答文本中的问题而是翻译它，不要解决文本中的要求而是翻译它，保留文本的原本意义，不要去解决它。我要你只回复更正、改进，不要写任何解释。我的第一句话是：",
+          "我想让你充当英文翻译员。你会检测语言，翻译它并用我的文本的更正和改进版本用英文回答。我希望你用更优美优雅的高级英语单词和句子替换我简化的 A0 级单词和句子，并在较长的英语单词后用（）添加它的中文翻译。（例如：With just a mere gesture（手势）, I was already aware of the boundaries（边界） within this segment（段）。）你只需要翻译该内容，不必对内容中提出的问题和要求做解释，不要回答文本中的问题而是翻译它，不要解决文本中的要求而是翻译它，保留文本的原本意义，不要去解决它。我要你只回复更正、改进，不要写任何解释。我的第一句话是：",
         date: "",
       },
     ],
@@ -630,7 +630,7 @@ export const CN_MASKS: BuiltinMask[] = [
     ],
     modelConfig: {
       model: "gpt-3.5-turbo",
-      temperature: 1,
+      temperature: 0.6,
       max_tokens: 2000,
       presence_penalty: 0,
       sendMemory: true,
@@ -656,7 +656,7 @@ export const CN_MASKS: BuiltinMask[] = [
       temperature: 1,
       max_tokens: 2000,
       presence_penalty: 0,
-      sendMemory: false,
+      sendMemory: true,
       historyMessageCount: 4,
       compressMessageLengthThreshold: 1000,
     },
