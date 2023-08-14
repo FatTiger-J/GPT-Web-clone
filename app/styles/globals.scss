@@ -5,7 +5,9 @@
   --theme: light;
 
   /* color */
+     // 聊天框背景色
   --white: white;
+    // 字体颜色
   --black: rgb(48, 48, 48);
   --gray: rgb(250, 250, 250);
   --primary: rgb(29, 147, 171);
@@ -26,11 +28,16 @@
   --theme: dark;
 
   /* color */
+     // 聊天框背景色
   --white: rgb(30, 30, 30);
-  --black: rgb(187, 187, 187);
-  --gray: rgb(21, 21, 21);
-  --primary: rgb(29, 147, 171);
-  --second: rgb(27 38 42);
+    // 字体颜色
+  --black: rgb(191, 191, 191);
+  // 大背景底色
+  --gray: rgb(12, 12, 12);
+  // 历史聊天边框和发送按钮颜色
+  --primary: rgb(75, 90, 240);
+  // 侧边栏颜色
+  --second: rgb(35, 30, 45); 
   --hover-color: #323232;
 
   --bar-color: rgba(255, 255, 255, 0.1);
@@ -51,7 +58,7 @@
   // 聊天框背景色
   --white: rgb(255, 255, 240);
   // 字体颜色
-  --black: rgb(48, 48, 48);
+  --black: rgb(45, 45, 45);
   // 大背景底色
   --gray: rgb(255, 248, 220);
   // 历史聊天边框和发送按钮颜色
