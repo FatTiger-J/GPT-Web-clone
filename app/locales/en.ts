@@ -32,10 +32,10 @@ const en: LocaleType = {
       Stop: "Stop",
       ToBottom: "To Latest",
       Theme: {
-        auto: "Auto",
+        // auto: "Auto",
         light: "Light Theme",
         dark: "Dark Theme",
-        autumn: "Autumn Theme",
+        // autumn: "Autumn Theme",
       },
       Prompt: "Prompts",
       Masks: "Masks",

@@ -57,15 +57,16 @@ export function useSwitchTheme() {
   useEffect(() => {
     document.body.classList.remove("light");
     document.body.classList.remove("dark");
-    document.body.classList.remove("autumn");
+    // document.body.classList.remove("autumn");
 
     if (config.theme === "dark") {
       document.body.classList.add("dark");
     } else if (config.theme === "light") {
       document.body.classList.add("light");
-    } else if (config.theme === "autumn") {
-      document.body.classList.add("autumn");
     }
+    // else if (config.theme === "autumn") {
+    //   document.body.classList.add("autumn");
+    // }
 
     const metaDescriptionDark = document.querySelector(
       'meta[name="theme-color"][media*="dark"]',
@@ -74,20 +75,20 @@ export function useSwitchTheme() {
       'meta[name="theme-color"][media*="light"]',
     );
 
-    const metaDescriptionAutumn = document.querySelector(
-      'meta[name="theme-color"][media*="autumn"]',
-    );
+    // const metaDescriptionAutumn = document.querySelector(
+    //   'meta[name="theme-color"][media*="autumn"]',
+    // );
 
     // #FFF8DC
-    if (config.theme === "auto") {
+    if (config.theme === "light") {
       metaDescriptionDark?.setAttribute("content", "#151515");
       metaDescriptionLight?.setAttribute("content", "#fafafa");
-      metaDescriptionAutumn?.setAttribute("content", "#fff8dc");
+      // metaDescriptionAutumn?.setAttribute("content", "#fff8dc");
     } else {
       const themeColor = getCSSVar("--theme-color");
       metaDescriptionDark?.setAttribute("content", themeColor);
       metaDescriptionLight?.setAttribute("content", themeColor);
-      metaDescriptionAutumn?.setAttribute("content", themeColor);
+      // metaDescriptionAutumn?.setAttribute("content", themeColor);
     }
   }, [config.theme]);
 }

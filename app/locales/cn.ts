@@ -30,10 +30,10 @@ const cn = {
       Stop: "停止响应",
       ToBottom: "滚到最新",
       Theme: {
-        auto: "自动主题",
+        // auto: "自动主题",
         light: "亮色模式",
         dark: "深色模式",
-        autumn: "金秋模式",
+        // autumn: "金秋模式",
       },
       Prompt: "快捷指令",
       Masks: "所有角色",

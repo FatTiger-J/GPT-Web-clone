@@ -2,7 +2,7 @@
  * @Author: hilin hilin
  * @Date: 2023-07-15 15:26:02
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-07-31 23:51:34
+ * @LastEditTime: 2023-08-27 15:35:19
  * @FilePath: /GPT-Web-copy/app/components/chat.tsx
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -387,7 +387,8 @@ export function ChatActions(props: {
   // switch themes
   const theme = config.theme;
   function nextTheme() {
-    const themes = [Theme.Auto, Theme.Light, Theme.Dark, Theme.Autumn];
+    // const themes = [Theme.Auto, Theme.Light, Theme.Dark, Theme.Autumn];
+    const themes = [Theme.Light, Theme.Dark];
     const themeIndex = themes.indexOf(theme);
     const nextIndex = (themeIndex + 1) % themes.length;
     const nextTheme = themes[nextIndex];
@@ -427,7 +428,7 @@ export function ChatActions(props: {
         text={Locale.Chat.InputActions.Theme[theme]}
         icon={
           <>
-            {theme === Theme.Auto ? (
+            {/* {theme === Theme.Auto ? (
               <AutoIcon />
             ) : theme === Theme.Light ? (
               <LightIcon />
@@ -435,6 +436,11 @@ export function ChatActions(props: {
               <DarkIcon />
             ) : theme === Theme.Autumn ? (
               <AutumnIcon />
+            ) : null} */}
+            {theme === Theme.Light ? (
+              <LightIcon />
+            ) : theme === Theme.Dark ? (
+              <DarkIcon />
             ) : null}
           </>
         }
